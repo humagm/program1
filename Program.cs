@@ -6,30 +6,25 @@ namespace problem1
     {
         static void Main(string[] args)
         {
-          Console.WriteLine("This program will display a number that you type in");
+         Console.Clear();
 
-          var number = 0;
+         int number = 0;
+         int counter = 10;
 
-          Console.WriteLine("please type in number:");
+         for(int i = 0; i < counter;i++){
+         Console.WriteLine("please enter a number");
+         int input = int.Parse (Console.ReadLine());
 
-          var isNumber = int.TryParse(Console.ReadLine(), out number);
+         number += input;
+         }
+         Console.WriteLine($"Total is {number}");
+         Console.WriteLine($"Average is {number / 10}");
 
-          if(isNumber) {
-               Console.WriteLine($"The number is {number}");
-
-              
-          }
-          else{
-               Console.WriteLine($"you didn't type in a number");
-          }
-    
-
-          //End the program with blank line and instructions",
+ //End the program with blank line and instructions",
 			Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("Press <Enter> to quit the program");
             Console.ReadKey();
-        
         }
     }
 }
